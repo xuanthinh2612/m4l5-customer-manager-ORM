@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+
+</head>
+<body>
+
+<h3>Delete Customer Information</h3>
+<form  method="post" th:object="${customer}">
+    <table id="customers">
+        <tr>
+            <td>Name</td>
+            <td th:text="${customer.getName()}"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td th:text="${customer.getEmail()}"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td th:text="${customer.getAddress()}"></td>
+        </tr>
+    </table>
+
+    <button type="submit">Delete</button>
+
+</form>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
